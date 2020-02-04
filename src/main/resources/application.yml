@@ -1,0 +1,19 @@
+app:
+  jwtSecret: JWTSuperSecretKey
+  jwtExpirationInMs: 604800000
+  datasource:
+      jdbc-url : jdbc:postgresql://localhost:5432/fireflypersonal
+      username : postgres
+      password : ucong123
+      pool-size : 30
+
+spring:      
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        ddl-auto: update
